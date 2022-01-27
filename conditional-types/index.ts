@@ -18,3 +18,7 @@ declare function isCatish<T>(x: T): T extends { meows: true } ? T : undefined;
 type GetReturnValue<T> = T extends (...args: any[]) => infer R ? R : T;
 type getIDReturn = GetReturnValue<typeof getId>;
 type getCat = GetReturnValue<Cat>;
+
+type MyType<T> = T extends infer R ? R : never;
+type T1 = MyType<{ b: string }> // T1 is { b: string; }
+type MyType2<T> = T extends infer R2 ? R2 : never; // error, R2 undeclared
