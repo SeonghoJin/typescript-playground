@@ -22,3 +22,5 @@ type getCat = GetReturnValue<Cat>;
 type MyType<T> = T extends infer R ? R : never;
 type T1 = MyType<{ b: string }> // T1 is { b: string; }
 type MyType2<T> = T extends infer R2 ? R2 : never; // error, R2 undeclared
+type UnpackArrayType<T> = T extends (infer R)[] ? R : T;
+type t1 = UnpackArrayType<number[]>; // t1 is number
