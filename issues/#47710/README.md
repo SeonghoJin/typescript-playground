@@ -12,7 +12,7 @@ issue를 한 사람은 spread를 이용해 decoreate함수를 만들려고 했�
 
 ---
 
-일단 spread를 이용한 typechecking이 안되는 이유는 그냥 spread를 이용해서 그렇다. spread를 이용하면 type이 확장된다. 즉 isString = true | false가 된다. DecoratedFoo에서 isString이 true이고 StringFoo Type이여야 하는데 확장이 되어버리면 isString = true | false & StringFooType이 되어버려 DecoratedFoo Type이 되지 못한다.
+spread를 이용한 typechecking이 안되는 이유는 타입 확장을 하는 spread를 이용하여, isString의 타입이 boolean이 되어버렸기 때문이다. DecoratedFoo에서 isString이 true이고 StringFoo Type이여야 하는데 확장이 되어버리면 isString = true | false & StringFooType이 되어버려 DecoratedFoo Type이 되지 못한다.
 
 즉 타입 확장은 어느 한 property의 가능성을 조합하는 거지 다른 property를 고려하지 않는ㄷ.
 
