@@ -1,0 +1,28 @@
+{
+  "name": "typescript-playground",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "create:issue": "ts-node issue-creator/index.ts create -n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeonghoJin/typescript-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeonghoJin/typescript-playground/issues"
+  },
+  "homepage": "https://github.com/SeonghoJin/typescript-playground#readme",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.15",
+    "@types/yargs": "^17.0.8"
+  }
+}
